@@ -14,7 +14,7 @@ jobs:
         with:
           version: 7.4.3663
       - name: Tag repo
-        uses: changesets/action@1
+        uses: changesets/action@v1
         if: ${{ github.ref == 'refs/heads/main' && startsWith(github.event.commits[0].message, 'Version Packages') }}
         with:
           publish: npx changeset tag
